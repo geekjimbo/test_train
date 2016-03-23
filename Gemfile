@@ -39,9 +39,10 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'debugger', group: [:development, :test]
 
 gem 'bootstrap-sass', '~> 3.1.1'
+gem 'postgresql'
 
 group :development, :test do
-  gem "rspec-rails", "~> 3.1.0"
+  gem "rspec-rails", "~> 3.4.0"
   gem "factory_girl_rails", "~> 4.4.1"
 end
 

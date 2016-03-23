@@ -1,0 +1,26 @@
+  [1m[36m (589.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (504.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (444.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateContacts (20140605000724)
+  [1m[35m (490.6ms)[0m  BEGIN
+  [1m[36m (458.5ms)[0m  [1mCREATE TABLE "contacts" ("id" serial primary key, "firstname" character varying(255), "lastname" character varying(255), "email" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (180.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140605000724"]]
+  [1m[36m (188.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePhones (20140605002008)
+  [1m[35m (206.3ms)[0m  BEGIN
+  [1m[36m (224.6ms)[0m  [1mCREATE TABLE "phones" ("id" serial primary key, "contact_id" integer, "phone" character varying(255), "phone_type" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (189.6ms)[0m  CREATE  INDEX  "index_phones_on_contact_id" ON "phones"  ("contact_id")
+  [1m[36mSQL (190.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140605002008"]]
+  [1m[35m (216.8ms)[0m  COMMIT
+Migrating to CreateUsers (20140606035847)
+  [1m[36m (187.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (208.2ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (190.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140606035847"]]
+  [1m[35m (192.3ms)[0m  COMMIT
+Migrating to AddAdminToUser (20140606043459)
+  [1m[36m (357.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (827.3ms)[0m  ALTER TABLE "users" ADD COLUMN "admin" boolean
+  [1m[36mSQL (198.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140606043459"]]
+  [1m[35m (188.1ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (195.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (205.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
