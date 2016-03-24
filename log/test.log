@@ -531,3 +531,125 @@
   [1m[36m (152.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35mPhone Exists (160.6ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '2588-0853' AND "phones"."contact_id" = 48) LIMIT 1
   [1m[36m (153.0ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (155.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (155.2ms)[0m  BEGIN
+  [1m[36mPhone Exists (151.7ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '790.918.4928' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mPhone Exists (160.4ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '468.749.7985 x43417' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mPhone Exists (155.7ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '1-318-532-0187 x8472' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mContact Exists (153.1ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'antwan_abshire@crona.info' LIMIT 1
+  [1m[36m (154.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (151.2ms)[0m  BEGIN
+  [1m[36m (167.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPhone Exists (153.1ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '547-988-5069' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mPhone Exists (163.2ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '267-035-0246 x79710' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mPhone Exists (184.8ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '(230) 524-6212 x35507' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mContact Exists (153.0ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'adrianna@bartoletti.name' LIMIT 1[0m
+  [1m[35mSQL (165.0ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 13:06:48.464840"], ["email", "adrianna@bartoletti.name"], ["firstname", "Ozella"], ["lastname", "Skiles"], ["updated_at", "2016-03-24 13:06:48.464840"]]
+  [1m[36mSQL (158.7ms)[0m  [1mINSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["contact_id", 49], ["created_at", "2016-03-24 13:06:48.788301"], ["phone", "547-988-5069"], ["phone_type", "home_phone"], ["updated_at", "2016-03-24 13:06:48.788301"]]
+  [1m[35mSQL (160.1ms)[0m  INSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["contact_id", 49], ["created_at", "2016-03-24 13:06:49.103789"], ["phone", "267-035-0246 x79710"], ["phone_type", "mobile_phone"], ["updated_at", "2016-03-24 13:06:49.103789"]]
+  [1m[36mSQL (473.2ms)[0m  [1mINSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["contact_id", 49], ["created_at", "2016-03-24 13:06:49.265161"], ["phone", "(230) 524-6212 x35507"], ["phone_type", "work_phone"], ["updated_at", "2016-03-24 13:06:49.265161"]]
+  [1m[35m (187.6ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (153.5ms)[0m  [1mSELECT COUNT(*) FROM "phones"  WHERE "phones"."contact_id" = $1[0m  [["contact_id", 49]]
+  [1m[35m (152.6ms)[0m  ROLLBACK
+  [1m[36m (155.9ms)[0m  [1mBEGIN[0m
+  [1m[35mPhone Exists (154.7ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '1-430-739-8080 x656' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mPhone Exists (155.8ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '1-302-729-4309 x943' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mPhone Exists (155.8ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '712-095-7265' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mContact Exists (158.8ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'rodrigo.moen@klocko.net' LIMIT 1[0m
+  [1m[35m (147.4ms)[0m  ROLLBACK
+  [1m[36m (151.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPhone Exists (154.6ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '1-907-951-0018' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mPhone Exists (155.1ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '691.463.2331 x7036' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mPhone Exists (153.0ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '(602) 043-8039 x715' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mContact Exists (154.5ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'hester.mann@turner.com' LIMIT 1[0m
+  [1m[35m (198.2ms)[0m  ROLLBACK
+  [1m[36m (153.5ms)[0m  [1mBEGIN[0m
+  [1m[35mPhone Exists (153.6ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '1-543-696-6315' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mPhone Exists (159.8ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '(364) 741-5433 x62348' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mPhone Exists (155.6ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '(571) 841-0259' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mContact Exists (517.4ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" IS NULL LIMIT 1[0m
+  [1m[35m (171.4ms)[0m  ROLLBACK
+  [1m[36m (151.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (152.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPhone Exists (169.2ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '(874) 772-0675 x4809' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mPhone Exists (155.4ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '294.100.0818 x5935' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mPhone Exists (155.5ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '658.194.2824 x5353' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mContact Exists (152.3ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'joe@doe.com' LIMIT 1
+  [1m[36mSQL (158.1ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 13:06:55.219428"], ["email", "joe@doe.com"], ["firstname", "Germaine"], ["lastname", "Quitzon"], ["updated_at", "2016-03-24 13:06:55.219428"]]
+  [1m[35mSQL (157.6ms)[0m  INSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["contact_id", 50], ["created_at", "2016-03-24 13:06:55.378811"], ["phone", "(874) 772-0675 x4809"], ["phone_type", "home_phone"], ["updated_at", "2016-03-24 13:06:55.378811"]]
+  [1m[36mSQL (157.9ms)[0m  [1mINSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["contact_id", 50], ["created_at", "2016-03-24 13:06:55.537696"], ["phone", "294.100.0818 x5935"], ["phone_type", "mobile_phone"], ["updated_at", "2016-03-24 13:06:55.537696"]]
+  [1m[35mSQL (157.7ms)[0m  INSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["contact_id", 50], ["created_at", "2016-03-24 13:06:55.696867"], ["phone", "658.194.2824 x5353"], ["phone_type", "work_phone"], ["updated_at", "2016-03-24 13:06:55.696867"]]
+  [1m[36m (153.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPhone Exists (155.6ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '1-561-078-6465 x378' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mPhone Exists (157.9ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '(305) 263-7976 x978' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mPhone Exists (155.3ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '209-803-0373 x1164' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mContact Exists (157.8ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'joe@doe.com' LIMIT 1[0m
+  [1m[35m (149.8ms)[0m  ROLLBACK
+  [1m[36m (166.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (153.3ms)[0m  ROLLBACK
+  [1m[36m (153.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (158.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPhone Exists (155.8ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '1-970-054-2586' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mPhone Exists (155.6ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '473.625.9960' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mPhone Exists (155.3ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '323-685-4397 x720' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mContact Exists (155.4ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'jimmyfigueroa@me.com' LIMIT 1
+  [1m[36mSQL (158.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 13:06:58.389277"], ["email", "jimmyfigueroa@me.com"], ["firstname", "Jimmy"], ["lastname", "Figueroa"], ["updated_at", "2016-03-24 13:06:58.389277"]]
+  [1m[35mSQL (157.6ms)[0m  INSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["contact_id", 51], ["created_at", "2016-03-24 13:06:58.548815"], ["phone", "1-970-054-2586"], ["phone_type", "home_phone"], ["updated_at", "2016-03-24 13:06:58.548815"]]
+  [1m[36mSQL (157.5ms)[0m  [1mINSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["contact_id", 51], ["created_at", "2016-03-24 13:06:58.707684"], ["phone", "473.625.9960"], ["phone_type", "mobile_phone"], ["updated_at", "2016-03-24 13:06:58.707684"]]
+  [1m[35mSQL (160.3ms)[0m  INSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["contact_id", 51], ["created_at", "2016-03-24 13:06:58.866582"], ["phone", "323-685-4397 x720"], ["phone_type", "work_phone"], ["updated_at", "2016-03-24 13:06:58.866582"]]
+  [1m[36m (161.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (150.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPhone Exists (156.0ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '654.824.0218 x312' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mPhone Exists (155.6ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '278-170-1262' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mPhone Exists (171.1ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '799.870.5300 x597' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mContact Exists (156.3ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'tommy@jones.com' LIMIT 1
+  [1m[36mSQL (157.6ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 13:06:59.985496"], ["email", "tommy@jones.com"], ["firstname", "Tommy"], ["lastname", "Jones"], ["updated_at", "2016-03-24 13:06:59.985496"]]
+  [1m[35mSQL (160.0ms)[0m  INSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["contact_id", 52], ["created_at", "2016-03-24 13:07:00.144310"], ["phone", "654.824.0218 x312"], ["phone_type", "home_phone"], ["updated_at", "2016-03-24 13:07:00.144310"]]
+  [1m[36mSQL (176.1ms)[0m  [1mINSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["contact_id", 52], ["created_at", "2016-03-24 13:07:00.305689"], ["phone", "278-170-1262"], ["phone_type", "mobile_phone"], ["updated_at", "2016-03-24 13:07:00.305689"]]
+  [1m[35mSQL (157.8ms)[0m  INSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["contact_id", 52], ["created_at", "2016-03-24 13:07:00.483098"], ["phone", "799.870.5300 x597"], ["phone_type", "work_phone"], ["updated_at", "2016-03-24 13:07:00.483098"]]
+  [1m[36m (153.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (155.7ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPhone Exists (155.1ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '655.262.8326' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mPhone Exists (152.8ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '(567) 711-6708 x96646' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mPhone Exists (338.2ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '839-558-2703 x0006' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mContact Exists (158.3ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'susan@james.com' LIMIT 1
+  [1m[36mSQL (160.9ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 13:07:01.762567"], ["email", "susan@james.com"], ["firstname", "Susan"], ["lastname", "James"], ["updated_at", "2016-03-24 13:07:01.762567"]]
+  [1m[35mSQL (157.8ms)[0m  INSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["contact_id", 53], ["created_at", "2016-03-24 13:07:01.924577"], ["phone", "655.262.8326"], ["phone_type", "home_phone"], ["updated_at", "2016-03-24 13:07:01.924577"]]
+  [1m[36mSQL (160.6ms)[0m  [1mINSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["contact_id", 53], ["created_at", "2016-03-24 13:07:02.083603"], ["phone", "(567) 711-6708 x96646"], ["phone_type", "mobile_phone"], ["updated_at", "2016-03-24 13:07:02.083603"]]
+  [1m[35mSQL (158.0ms)[0m  INSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["contact_id", 53], ["created_at", "2016-03-24 13:07:02.245394"], ["phone", "839-558-2703 x0006"], ["phone_type", "work_phone"], ["updated_at", "2016-03-24 13:07:02.245394"]]
+  [1m[36m (150.8ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mContact Load (174.5ms)[0m  SELECT "contacts".* FROM "contacts"  WHERE (lastname LIKE 'J%')  ORDER BY "contacts"."lastname" ASC
+  [1m[36m (158.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (150.9ms)[0m  BEGIN
+  [1m[36m (150.9ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPhone Exists (158.0ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '167.667.3521' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mPhone Exists (155.4ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '(323) 477-2561' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mPhone Exists (153.0ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '(356) 570-3028' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mContact Exists (155.5ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'jimmyfigueroa@me.com' LIMIT 1[0m
+  [1m[35mSQL (160.3ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 13:07:03.975986"], ["email", "jimmyfigueroa@me.com"], ["firstname", "Jimmy"], ["lastname", "Figueroa"], ["updated_at", "2016-03-24 13:07:03.975986"]]
+  [1m[36mSQL (181.9ms)[0m  [1mINSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["contact_id", 54], ["created_at", "2016-03-24 13:07:04.137670"], ["phone", "167.667.3521"], ["phone_type", "home_phone"], ["updated_at", "2016-03-24 13:07:04.137670"]]
+  [1m[35mSQL (157.6ms)[0m  INSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["contact_id", 54], ["created_at", "2016-03-24 13:07:04.320837"], ["phone", "(323) 477-2561"], ["phone_type", "mobile_phone"], ["updated_at", "2016-03-24 13:07:04.320837"]]
+  [1m[36mSQL (158.2ms)[0m  [1mINSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["contact_id", 54], ["created_at", "2016-03-24 13:07:04.479503"], ["phone", "(356) 570-3028"], ["phone_type", "work_phone"], ["updated_at", "2016-03-24 13:07:04.479503"]]
+  [1m[35m (155.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (151.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPhone Exists (155.2ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '422.279.3335' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mPhone Exists (155.3ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '1-644-636-3650 x8769' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mPhone Exists (157.0ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '1-367-832-0527' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mContact Exists (154.1ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'tommy@jones.com' LIMIT 1[0m
+  [1m[35mSQL (157.9ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 13:07:05.573463"], ["email", "tommy@jones.com"], ["firstname", "Tommy"], ["lastname", "Jones"], ["updated_at", "2016-03-24 13:07:05.573463"]]
+  [1m[36mSQL (155.2ms)[0m  [1mINSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["contact_id", 55], ["created_at", "2016-03-24 13:07:05.732879"], ["phone", "422.279.3335"], ["phone_type", "home_phone"], ["updated_at", "2016-03-24 13:07:05.732879"]]
+  [1m[35mSQL (340.4ms)[0m  INSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["contact_id", 55], ["created_at", "2016-03-24 13:07:05.889485"], ["phone", "1-644-636-3650 x8769"], ["phone_type", "mobile_phone"], ["updated_at", "2016-03-24 13:07:05.889485"]]
+  [1m[36mSQL (594.9ms)[0m  [1mINSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["contact_id", 55], ["created_at", "2016-03-24 13:07:06.231205"], ["phone", "1-367-832-0527"], ["phone_type", "work_phone"], ["updated_at", "2016-03-24 13:07:06.231205"]]
+  [1m[35m (370.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (153.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPhone Exists (155.4ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '1-140-327-6118' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mPhone Exists (155.0ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '545.022.1299 x6791' AND "phones"."contact_id" IS NULL) LIMIT 1[0m
+  [1m[35mPhone Exists (155.1ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '849.339.9652' AND "phones"."contact_id" IS NULL) LIMIT 1
+  [1m[36mContact Exists (161.4ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'susan@james.com' LIMIT 1[0m
+  [1m[35mSQL (157.4ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 13:07:07.985563"], ["email", "susan@james.com"], ["firstname", "Susan"], ["lastname", "James"], ["updated_at", "2016-03-24 13:07:07.985563"]]
+  [1m[36mSQL (157.6ms)[0m  [1mINSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["contact_id", 56], ["created_at", "2016-03-24 13:07:08.144396"], ["phone", "1-140-327-6118"], ["phone_type", "home_phone"], ["updated_at", "2016-03-24 13:07:08.144396"]]
+  [1m[35mSQL (158.1ms)[0m  INSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["contact_id", 56], ["created_at", "2016-03-24 13:07:08.303299"], ["phone", "545.022.1299 x6791"], ["phone_type", "mobile_phone"], ["updated_at", "2016-03-24 13:07:08.303299"]]
+  [1m[36mSQL (163.0ms)[0m  [1mINSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["contact_id", 56], ["created_at", "2016-03-24 13:07:08.462764"], ["phone", "849.339.9652"], ["phone_type", "work_phone"], ["updated_at", "2016-03-24 13:07:08.462764"]]
+  [1m[35m (150.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mContact Load (175.1ms)[0m  [1mSELECT "contacts".* FROM "contacts"  WHERE (lastname LIKE 'J%')  ORDER BY "contacts"."lastname" ASC[0m
+  [1m[35m (165.6ms)[0m  ROLLBACK
