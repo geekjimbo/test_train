@@ -265,3 +265,269 @@
   [1m[36m (158.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35mContact Load (225.1ms)[0m  SELECT "contacts".* FROM "contacts"  WHERE (lastname LIKE 'J%')  ORDER BY "contacts"."lastname" ASC
   [1m[36m (158.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (153.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (158.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (153.7ms)[0m  BEGIN
+  [1m[36mContact Exists (173.8ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'jimmyfigueroa@me.com' LIMIT 1[0m
+  [1m[35m (176.5ms)[0m  ROLLBACK
+  [1m[36m (154.9ms)[0m  [1mBEGIN[0m
+  [1m[35mContact Exists (173.3ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" IS NULL LIMIT 1
+  [1m[36m (219.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (154.3ms)[0m  BEGIN
+  [1m[36mContact Exists (155.3ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" IS NULL LIMIT 1[0m
+  [1m[35m (153.9ms)[0m  ROLLBACK
+  [1m[36m (156.9ms)[0m  [1mBEGIN[0m
+  [1m[35mContact Exists (154.4ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" IS NULL LIMIT 1
+  [1m[36m (156.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (157.0ms)[0m  BEGIN
+  [1m[36m (156.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (163.9ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'joe@doe.com' LIMIT 1
+  [1m[36mSQL (201.8ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 11:47:24.783699"], ["email", "joe@doe.com"], ["firstname", "joe"], ["lastname", "doe"], ["updated_at", "2016-03-24 11:47:24.783699"]]
+  [1m[35m (161.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mContact Exists (157.8ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'joe@doe.com' LIMIT 1[0m
+  [1m[35m (154.8ms)[0m  ROLLBACK
+  [1m[36m (156.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (154.4ms)[0m  ROLLBACK
+  [1m[36m (156.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (156.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (153.7ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'jimmyfigueroa@me.com' LIMIT 1[0m
+  [1m[35mSQL (158.2ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 11:47:26.722530"], ["email", "jimmyfigueroa@me.com"], ["firstname", "Jimmy"], ["lastname", "Figueroa"], ["updated_at", "2016-03-24 11:47:26.722530"]]
+  [1m[36m (153.8ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (154.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (156.1ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'tommy@jones.com' LIMIT 1[0m
+  [1m[35mSQL (157.9ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 11:47:27.347821"], ["email", "tommy@jones.com"], ["firstname", "Tommy"], ["lastname", "Jones"], ["updated_at", "2016-03-24 11:47:27.347821"]]
+  [1m[36m (154.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (153.9ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (156.4ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'susan@james.com' LIMIT 1[0m
+  [1m[35mSQL (159.9ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 11:47:27.972707"], ["email", "susan@james.com"], ["firstname", "Susan"], ["lastname", "James"], ["updated_at", "2016-03-24 11:47:27.972707"]]
+  [1m[36m (157.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mContact Load (197.2ms)[0m  SELECT "contacts".* FROM "contacts"  WHERE (lastname LIKE 'J%')  ORDER BY "contacts"."lastname" ASC
+  [1m[36m (153.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (154.3ms)[0m  BEGIN
+  [1m[36m (156.7ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (159.3ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'jimmyfigueroa@me.com' LIMIT 1
+  [1m[36mSQL (160.8ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 11:47:29.272079"], ["email", "jimmyfigueroa@me.com"], ["firstname", "Jimmy"], ["lastname", "Figueroa"], ["updated_at", "2016-03-24 11:47:29.272079"]]
+  [1m[35m (155.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (159.7ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (156.2ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'tommy@jones.com' LIMIT 1
+  [1m[36mSQL (157.9ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 11:47:29.907377"], ["email", "tommy@jones.com"], ["firstname", "Tommy"], ["lastname", "Jones"], ["updated_at", "2016-03-24 11:47:29.907377"]]
+  [1m[35m (157.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (154.7ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (158.2ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'susan@james.com' LIMIT 1
+  [1m[36mSQL (159.9ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 11:47:30.538905"], ["email", "susan@james.com"], ["firstname", "Susan"], ["lastname", "James"], ["updated_at", "2016-03-24 11:47:30.538905"]]
+  [1m[35m (155.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mContact Load (184.0ms)[0m  [1mSELECT "contacts".* FROM "contacts"  WHERE (lastname LIKE 'J%')  ORDER BY "contacts"."lastname" ASC[0m
+  [1m[35m (153.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (156.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (150.2ms)[0m  BEGIN
+  [1m[36mContact Exists (151.9ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'jimmyfigueroa@me.com' LIMIT 1[0m
+  [1m[35m (155.6ms)[0m  ROLLBACK
+  [1m[36m (153.8ms)[0m  [1mBEGIN[0m
+  [1m[35mContact Exists (158.8ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" IS NULL LIMIT 1
+  [1m[36m (149.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (151.0ms)[0m  BEGIN
+  [1m[36mContact Exists (154.0ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" IS NULL LIMIT 1[0m
+  [1m[35m (151.3ms)[0m  ROLLBACK
+  [1m[36m (151.0ms)[0m  [1mBEGIN[0m
+  [1m[35mContact Exists (154.5ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" IS NULL LIMIT 1
+  [1m[36m (151.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (150.6ms)[0m  BEGIN
+  [1m[36m (150.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (155.3ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'joe@doe.com' LIMIT 1
+  [1m[36mSQL (158.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 11:53:15.668108"], ["email", "joe@doe.com"], ["firstname", "joe"], ["lastname", "doe"], ["updated_at", "2016-03-24 11:53:15.668108"]]
+  [1m[35m (152.8ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mContact Exists (156.0ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'joe@doe.com' LIMIT 1[0m
+  [1m[35m (154.3ms)[0m  ROLLBACK
+  [1m[36m (149.9ms)[0m  [1mBEGIN[0m
+  [1m[35m (151.4ms)[0m  ROLLBACK
+  [1m[36m (217.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (156.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (154.9ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'jimmyfigueroa@me.com' LIMIT 1[0m
+  [1m[35mSQL (157.9ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 11:53:17.600183"], ["email", "jimmyfigueroa@me.com"], ["firstname", "Jimmy"], ["lastname", "Figueroa"], ["updated_at", "2016-03-24 11:53:17.600183"]]
+  [1m[36m (153.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (156.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (156.5ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'tommy@jones.com' LIMIT 1[0m
+  [1m[35mSQL (167.4ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 11:53:18.227127"], ["email", "tommy@jones.com"], ["firstname", "Tommy"], ["lastname", "Jones"], ["updated_at", "2016-03-24 11:53:18.227127"]]
+  [1m[36m (152.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (153.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (158.4ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'susan@james.com' LIMIT 1[0m
+  [1m[35mSQL (158.0ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 11:53:18.862058"], ["email", "susan@james.com"], ["firstname", "Susan"], ["lastname", "James"], ["updated_at", "2016-03-24 11:53:18.862058"]]
+  [1m[36m (150.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mContact Load (176.5ms)[0m  SELECT "contacts".* FROM "contacts"  WHERE (lastname LIKE 'J%')  ORDER BY "contacts"."lastname" ASC
+  [1m[36m (152.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (148.2ms)[0m  BEGIN
+  [1m[36m (153.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (152.8ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'jimmyfigueroa@me.com' LIMIT 1
+  [1m[36mSQL (470.4ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 11:53:20.117851"], ["email", "jimmyfigueroa@me.com"], ["firstname", "Jimmy"], ["lastname", "Figueroa"], ["updated_at", "2016-03-24 11:53:20.117851"]]
+  [1m[35m (158.6ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (154.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (158.3ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'tommy@jones.com' LIMIT 1
+  [1m[36mSQL (162.1ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 11:53:21.062388"], ["email", "tommy@jones.com"], ["firstname", "Tommy"], ["lastname", "Jones"], ["updated_at", "2016-03-24 11:53:21.062388"]]
+  [1m[35m (155.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (152.7ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (163.8ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'susan@james.com' LIMIT 1
+  [1m[36mSQL (160.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 11:53:21.699795"], ["email", "susan@james.com"], ["firstname", "Susan"], ["lastname", "James"], ["updated_at", "2016-03-24 11:53:21.699795"]]
+  [1m[35m (150.7ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mContact Load (537.0ms)[0m  [1mSELECT "contacts".* FROM "contacts"  WHERE (lastname LIKE 'J%')  ORDER BY "contacts"."lastname" ASC[0m
+  [1m[35m (155.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (170.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (161.9ms)[0m  BEGIN
+  [1m[36mContact Exists (164.5ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'johndoe1@example.com' LIMIT 1[0m
+  [1m[35m (164.6ms)[0m  ROLLBACK
+  [1m[36m (166.1ms)[0m  [1mBEGIN[0m
+  [1m[35mContact Exists (166.1ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'jimmyfigueroa@me.com' LIMIT 1
+  [1m[36m (163.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (165.4ms)[0m  BEGIN
+  [1m[36mContact Exists (168.8ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" IS NULL LIMIT 1[0m
+  [1m[35m (161.6ms)[0m  ROLLBACK
+  [1m[36m (164.9ms)[0m  [1mBEGIN[0m
+  [1m[35mContact Exists (165.6ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" IS NULL LIMIT 1
+  [1m[36m (165.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (165.8ms)[0m  BEGIN
+  [1m[36mContact Exists (168.3ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" IS NULL LIMIT 1[0m
+  [1m[35m (166.6ms)[0m  ROLLBACK
+  [1m[36m (165.9ms)[0m  [1mBEGIN[0m
+  [1m[35m (167.7ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (166.7ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'joe@doe.com' LIMIT 1[0m
+  [1m[35mSQL (169.6ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 12:08:09.912024"], ["email", "joe@doe.com"], ["firstname", "joe"], ["lastname", "doe"], ["updated_at", "2016-03-24 12:08:09.912024"]]
+  [1m[36m (165.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (175.4ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'joe@doe.com' LIMIT 1
+  [1m[36m (164.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (164.6ms)[0m  BEGIN
+  [1m[36m (165.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (165.1ms)[0m  BEGIN
+  [1m[36m (167.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (169.6ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'jimmyfigueroa@me.com' LIMIT 1
+  [1m[36mSQL (172.7ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 12:08:11.938801"], ["email", "jimmyfigueroa@me.com"], ["firstname", "Jimmy"], ["lastname", "Figueroa"], ["updated_at", "2016-03-24 12:08:11.938801"]]
+  [1m[35m (165.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (165.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (169.9ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'tommy@jones.com' LIMIT 1
+  [1m[36mSQL (171.7ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 12:08:12.615683"], ["email", "tommy@jones.com"], ["firstname", "Tommy"], ["lastname", "Jones"], ["updated_at", "2016-03-24 12:08:12.615683"]]
+  [1m[35m (162.9ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (165.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (167.1ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'susan@james.com' LIMIT 1
+  [1m[36mSQL (170.6ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 12:08:13.286073"], ["email", "susan@james.com"], ["firstname", "Susan"], ["lastname", "James"], ["updated_at", "2016-03-24 12:08:13.286073"]]
+  [1m[35m (165.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mContact Load (184.8ms)[0m  [1mSELECT "contacts".* FROM "contacts"  WHERE (lastname LIKE 'J%')  ORDER BY "contacts"."lastname" ASC[0m
+  [1m[35m (169.5ms)[0m  ROLLBACK
+  [1m[36m (163.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (166.9ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (166.0ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'jimmyfigueroa@me.com' LIMIT 1[0m
+  [1m[35mSQL (170.7ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 12:08:14.645868"], ["email", "jimmyfigueroa@me.com"], ["firstname", "Jimmy"], ["lastname", "Figueroa"], ["updated_at", "2016-03-24 12:08:14.645868"]]
+  [1m[36m (163.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (206.7ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (167.5ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'tommy@jones.com' LIMIT 1[0m
+  [1m[35mSQL (168.4ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 12:08:15.357879"], ["email", "tommy@jones.com"], ["firstname", "Tommy"], ["lastname", "Jones"], ["updated_at", "2016-03-24 12:08:15.357879"]]
+  [1m[36m (178.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (165.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (166.2ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'susan@james.com' LIMIT 1[0m
+  [1m[35mSQL (168.9ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 12:08:16.039177"], ["email", "susan@james.com"], ["firstname", "Susan"], ["lastname", "James"], ["updated_at", "2016-03-24 12:08:16.039177"]]
+  [1m[36m (165.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mContact Load (186.6ms)[0m  SELECT "contacts".* FROM "contacts"  WHERE (lastname LIKE 'J%')  ORDER BY "contacts"."lastname" ASC
+  [1m[36m (164.8ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (176.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (174.2ms)[0m  BEGIN
+  [1m[36mContact Exists (798.5ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'johndoe1@example.com' LIMIT 1[0m
+  [1m[35m (174.5ms)[0m  ROLLBACK
+  [1m[36m (169.3ms)[0m  [1mBEGIN[0m
+  [1m[35mContact Exists (175.5ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'johndoe2@example.com' LIMIT 1
+  [1m[36m (168.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (172.5ms)[0m  BEGIN
+  [1m[36mContact Exists (172.1ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'johndoe3@example.com' LIMIT 1[0m
+  [1m[35m (174.5ms)[0m  ROLLBACK
+  [1m[36m (169.8ms)[0m  [1mBEGIN[0m
+  [1m[35mContact Exists (173.1ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" IS NULL LIMIT 1
+  [1m[36m (180.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (172.9ms)[0m  BEGIN
+  [1m[36m (181.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (174.2ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'joe@doe.com' LIMIT 1
+  [1m[36mSQL (179.9ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 12:28:39.580049"], ["email", "joe@doe.com"], ["firstname", "John"], ["lastname", "Doe"], ["updated_at", "2016-03-24 12:28:39.580049"]]
+  [1m[35m (171.6ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mContact Exists (174.0ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'joe@doe.com' LIMIT 1[0m
+  [1m[35m (170.1ms)[0m  ROLLBACK
+  [1m[36m (174.8ms)[0m  [1mBEGIN[0m
+  [1m[35m (171.5ms)[0m  ROLLBACK
+  [1m[36m (169.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (170.9ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (172.2ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'jimmyfigueroa@me.com' LIMIT 1[0m
+  [1m[35mSQL (176.0ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 12:28:41.671416"], ["email", "jimmyfigueroa@me.com"], ["firstname", "Jimmy"], ["lastname", "Figueroa"], ["updated_at", "2016-03-24 12:28:41.671416"]]
+  [1m[36m (169.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (171.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (173.6ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'tommy@jones.com' LIMIT 1[0m
+  [1m[35mSQL (179.4ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 12:28:42.364943"], ["email", "tommy@jones.com"], ["firstname", "Tommy"], ["lastname", "Jones"], ["updated_at", "2016-03-24 12:28:42.364943"]]
+  [1m[36m (177.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (174.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (173.8ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'susan@james.com' LIMIT 1[0m
+  [1m[35mSQL (176.9ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 12:28:43.072811"], ["email", "susan@james.com"], ["firstname", "Susan"], ["lastname", "James"], ["updated_at", "2016-03-24 12:28:43.072811"]]
+  [1m[36m (172.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mContact Load (194.4ms)[0m  SELECT "contacts".* FROM "contacts"  WHERE (lastname LIKE 'J%')  ORDER BY "contacts"."lastname" ASC
+  [1m[36m (516.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (201.5ms)[0m  BEGIN
+  [1m[36m (168.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (173.9ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'jimmyfigueroa@me.com' LIMIT 1
+  [1m[36mSQL (176.5ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 12:28:44.861397"], ["email", "jimmyfigueroa@me.com"], ["firstname", "Jimmy"], ["lastname", "Figueroa"], ["updated_at", "2016-03-24 12:28:44.861397"]]
+  [1m[35m (172.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (171.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (174.1ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'tommy@jones.com' LIMIT 1
+  [1m[36mSQL (177.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 12:28:45.558571"], ["email", "tommy@jones.com"], ["firstname", "Tommy"], ["lastname", "Jones"], ["updated_at", "2016-03-24 12:28:45.558571"]]
+  [1m[35m (187.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (184.7ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (174.1ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'susan@james.com' LIMIT 1
+  [1m[36mSQL (179.7ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 12:28:46.284533"], ["email", "susan@james.com"], ["firstname", "Susan"], ["lastname", "James"], ["updated_at", "2016-03-24 12:28:46.284533"]]
+  [1m[35m (174.6ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mContact Load (195.3ms)[0m  [1mSELECT "contacts".* FROM "contacts"  WHERE (lastname LIKE 'J%')  ORDER BY "contacts"."lastname" ASC[0m
+  [1m[35m (171.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (161.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (155.3ms)[0m  BEGIN
+  [1m[36m (154.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (156.0ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'johndoe1@example.com' LIMIT 1
+  [1m[36mSQL (164.8ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 12:36:33.412655"], ["email", "johndoe1@example.com"], ["firstname", "John"], ["lastname", "Doe"], ["updated_at", "2016-03-24 12:36:33.412655"]]
+  [1m[35m (155.7ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (155.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPhone Exists (159.8ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '123-555-1234' AND "phones"."contact_id" = 43) LIMIT 1
+  [1m[36mSQL (158.8ms)[0m  [1mINSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["contact_id", 43], ["created_at", "2016-03-24 12:36:34.226265"], ["phone", "123-555-1234"], ["phone_type", "home"], ["updated_at", "2016-03-24 12:36:34.226265"]]
+  [1m[35m (155.9ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (155.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (157.9ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'johndoe2@example.com' LIMIT 1
+  [1m[36mSQL (165.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 12:36:35.018360"], ["email", "johndoe2@example.com"], ["firstname", "John"], ["lastname", "Doe"], ["updated_at", "2016-03-24 12:36:35.018360"]]
+  [1m[35m (156.7ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPhone Exists (179.5ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '785-555-1234' AND "phones"."contact_id" = 44) LIMIT 1[0m
+  [1m[35m (156.5ms)[0m  ROLLBACK
+  [1m[36m (155.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (156.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (157.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (147.1ms)[0m  BEGIN
+  [1m[36m (162.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (154.9ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'johndoe1@example.com' LIMIT 1
+  [1m[36mSQL (157.4ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 12:48:40.786753"], ["email", "johndoe1@example.com"], ["firstname", "John"], ["lastname", "Doe"], ["updated_at", "2016-03-24 12:48:40.786753"]]
+  [1m[35m (149.8ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (156.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (147.8ms)[0m  BEGIN
+  [1m[36m (466.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (157.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (148.5ms)[0m  BEGIN
+  [1m[36m (153.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Exists (149.6ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'johndoe1@example.com' LIMIT 1
+  [1m[36mSQL (164.5ms)[0m  [1mINSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-03-24 12:50:36.218484"], ["email", "johndoe1@example.com"], ["firstname", "John"], ["lastname", "Doe"], ["updated_at", "2016-03-24 12:50:36.218484"]]
+  [1m[35m (152.8ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (151.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPhone Exists (155.0ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '785-555-1234' AND "phones"."contact_id" = 46) LIMIT 1
+  [1m[36mSQL (161.3ms)[0m  [1mINSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["contact_id", 46], ["created_at", "2016-03-24 12:50:38.603768"], ["phone", "785-555-1234"], ["phone_type", "home"], ["updated_at", "2016-03-24 12:50:38.603768"]]
+  [1m[35m (153.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPhone Exists (160.0ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '785-555-1234' AND "phones"."contact_id" = 46) LIMIT 1[0m
+  [1m[35m (156.2ms)[0m  ROLLBACK
+  [1m[36m (154.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (151.9ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (161.8ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'johndoe2@example.com' LIMIT 1[0m
+  [1m[35mSQL (156.6ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 12:50:40.382955"], ["email", "johndoe2@example.com"], ["firstname", "John"], ["lastname", "Doe"], ["updated_at", "2016-03-24 12:50:40.382955"]]
+  [1m[36m (153.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (153.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPhone Exists (155.2ms)[0m  [1mSELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '2588-0853' AND "phones"."contact_id" = 47) LIMIT 1[0m
+  [1m[35mSQL (160.4ms)[0m  INSERT INTO "phones" ("contact_id", "created_at", "phone", "phone_type", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["contact_id", 47], ["created_at", "2016-03-24 12:50:41.004843"], ["phone", "2588-0853"], ["phone_type", "home"], ["updated_at", "2016-03-24 12:50:41.004843"]]
+  [1m[36m (156.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (160.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Exists (155.8ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE "contacts"."email" = 'johndoe3@example.com' LIMIT 1[0m
+  [1m[35mSQL (161.7ms)[0m  INSERT INTO "contacts" ("created_at", "email", "firstname", "lastname", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-03-24 12:50:41.640783"], ["email", "johndoe3@example.com"], ["firstname", "John"], ["lastname", "Doe"], ["updated_at", "2016-03-24 12:50:41.640783"]]
+  [1m[36m (152.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPhone Exists (160.6ms)[0m  SELECT  1 AS one FROM "phones"  WHERE ("phones"."phone" = '2588-0853' AND "phones"."contact_id" = 48) LIMIT 1
+  [1m[36m (153.0ms)[0m  [1mROLLBACK[0m
